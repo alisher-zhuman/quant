@@ -1,7 +1,8 @@
 import "./globals.css";
 import { ReactNode } from "react";
 import { Rubik } from "next/font/google";
-import { METADATA } from "@/shared/utils/constants";
+import { METADATA } from "@/utils/constants";
+
 const rubik = Rubik({
   subsets: ["latin", "cyrillic"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -17,7 +18,7 @@ const RootLayout = ({
   children: ReactNode;
 }>) => (
   <html lang="ru" className={rubik.variable}>
-    <body className="font-sans">{children}</body>
+    <body>{children}</body>
   </html>
 );
 
