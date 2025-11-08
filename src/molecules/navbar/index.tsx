@@ -7,17 +7,17 @@ export const Navbar = () => {
   const t = useTranslations();
 
   return (
-    <nav className="flex items-center gap-10">
-      <ul className="flex items-center gap-10">
+    <nav className="hidden items-center gap-3 lgx:gap-10 lg:flex ">
+      <ul className="flex items-center gap-3 lgx:gap-10">
         <li>
           <Link href="/documents" className="hover:text-[#1570EF]">
-            {t("documents")}
+            {t("Документы")}
           </Link>
         </li>
 
         <li>
           <Link href="/addresses" className="hover:text-[#1570EF]">
-            Где купить
+            {t("Где купить")}
           </Link>
         </li>
       </ul>
@@ -52,7 +52,7 @@ export const Navbar = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 py-2 px-4 text-[#1570EF] bg-[#1570EF1A] rounded-xl"
           >
-            Войти
+            {t("Войти")}
           </Link>
         </li>
       </ul>

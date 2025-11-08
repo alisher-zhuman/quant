@@ -4,8 +4,9 @@ import { Rubik } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { routing } from "../../i18n/routing";
+import { Header } from "@/organisms/layout/header";
 import { METADATA } from "@/utils/constants";
+import { routing } from "@/i18n/routing";
 
 const rubik = Rubik({
   subsets: ["latin", "cyrillic"],
@@ -34,7 +35,11 @@ const LocaleLayout = async ({ children, params }: Readonly<Props>) => {
     <html lang={locale} className={rubik.variable}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <main>
+            <Header />
+
+            {children}
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>

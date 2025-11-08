@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-lgx: 1123px;
+}
+
 body {
   font-family: "Rubik", sans-serif;
 }
