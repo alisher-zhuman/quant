@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/atoms/language-switcher";
+import { usePathname } from "next/navigation"; // <--- Импортируем
+import { cn } from "@/utils/helpers";
 
 interface Props {
   mobile?: boolean;
@@ -9,7 +11,11 @@ interface Props {
 }
 
 export const Navbar = ({ mobile, closeMenu }: Props) => {
+  const pathname = usePathname();
+
   const t = useTranslations();
+
+  const isActive = (href: string) => pathname.endsWith(href);
 
   if (mobile) {
     return (
@@ -50,11 +56,13 @@ export const Navbar = ({ mobile, closeMenu }: Props) => {
           <li>
             <Link
               href="/documents"
-              className="hover:text-[#1570EF] flex items-center justify-between gap-0.5"
+              className={cn(
+                "hover:text-[#1570EF] flex items-center justify-between gap-0.5",
+                isActive("/documents") && "text-[#1570EF]"
+              )}
               onClick={() => closeMenu?.()}
             >
               {t("Документы")}
-
               {mobile && (
                 <Image
                   src="/icons/arrow.svg"
@@ -69,11 +77,13 @@ export const Navbar = ({ mobile, closeMenu }: Props) => {
           <li>
             <Link
               href="/addresses"
-              className="hover:text-[#1570EF] flex items-center justify-between gap-0.5"
+              className={cn(
+                "hover:text-[#1570EF] flex items-center justify-between gap-0.5",
+                isActive("/addresses") && "text-[#1570EF]"
+              )}
               onClick={() => closeMenu?.()}
             >
               {t("Где купить")}
-
               {mobile && (
                 <Image
                   src="/icons/arrow.svg"
@@ -89,16 +99,29 @@ export const Navbar = ({ mobile, closeMenu }: Props) => {
     );
   }
 
+  // Десктоп
   return (
     <nav className="hidden lg:flex items-center gap-3 lgx:gap-10">
       <ul className="flex items-center gap-3 lgx:gap-10">
         <li>
-          <Link href="/documents" className="hover:text-[#1570EF]">
+          <Link
+            href="/documents"
+            className={cn(
+              "hover:text-[#1570EF]",
+              isActive("/documents") && "text-[#1570EF]"
+            )}
+          >
             {t("Документы")}
           </Link>
         </li>
         <li>
-          <Link href="/addresses" className="hover:text-[#1570EF]">
+          <Link
+            href="/addresses"
+            className={cn(
+              "hover:text-[#1570EF]",
+              isActive("/addresses") && "text-[#1570EF]"
+            )}
+          >
             {t("Где купить")}
           </Link>
         </li>

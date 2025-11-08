@@ -61,3 +61,36 @@ export const LANGUAGES = [
   { code: "kg", label: "КЫР" },
   { code: "en", label: "ENG" },
 ];
+
+export const DOCUMENTS = [
+  {
+    title: "Программа испытания СВУ",
+    pages: 3,
+    size: "2,8 МБ",
+    file: "/files/Программа испытания СВУ.pdf",
+  },
+  {
+    title: "Программа испытания СВК",
+    pages: 3,
+    size: "2,8 МБ",
+    file: "/files/Программа испытания СВК.pdf",
+  },
+  {
+    title: "Сертификат СВК15У",
+    pages: 2,
+    size: "37,5 МБ",
+    file: "/files/Сертификат СВК15У.pdf",
+  },
+  {
+    title: "Сертификат СВ15У",
+    pages: 2,
+    size: "38,1 МБ",
+    file: "/files/Сертификат СВ15У.pdf",
+  },
+  {
+    title: "Описание типа СВУ",
+    pages: 3,
+    size: "3 МБ",
+    file: "/files/Описание типа СВУ.pdf",
+  },
+];
