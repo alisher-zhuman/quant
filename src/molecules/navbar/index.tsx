@@ -2,12 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/atoms/language-switcher";
+import { cn } from "@/utils/helpers";
 
-export const Navbar = () => {
+interface Props {
+  mobile?: boolean;
+}
+
+export const Navbar = ({ mobile }: Props) => {
   const t = useTranslations();
 
   return (
-    <nav className="hidden items-center gap-3 lgx:gap-10 lg:flex ">
+    <nav
+      className={cn(
+        "items-center gap-3 lgx:gap-10",
+        mobile ? "flex flex-col" : "hidden lg:flex"
+      )}
+    >
       <ul className="flex items-center gap-3 lgx:gap-10">
         <li>
           <Link href="/documents" className="hover:text-[#1570EF]">
@@ -36,7 +46,6 @@ export const Navbar = () => {
               width={22}
               height={22}
             />
-
             <p>+996 997 111 888</p>
           </Link>
         </li>

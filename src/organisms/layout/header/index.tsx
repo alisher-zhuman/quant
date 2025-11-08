@@ -70,7 +70,7 @@ export const Header = () => {
 
         <AdviceButton className="mt-2" onClick={() => console.log("Hi")} />
 
-        <Navbar />
+        <Navbar mobile />
       </div>
     </header>
   );
