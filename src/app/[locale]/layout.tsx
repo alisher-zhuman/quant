@@ -1,0 +1,44 @@
+import "./globals.css";
+import { ReactNode } from "react";
+import { Rubik } from "next/font/google";
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { METADATA } from "@/utils/constants";
+import { routing } from "@/i18n/routing";
+
+const rubik = Rubik({
+  subsets: ["latin", "cyrillic"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-rubik",
+});
+
+export const metadata = METADATA;
+
+interface Props {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}
+
+const RootLayout = async ({ children, params }: Readonly<Props>) => {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  const messages = await getMessages({ locale });
+
+  return (
+    <html lang={locale} className={rubik.variable}>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+};
+
+export default RootLayout;

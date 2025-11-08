@@ -1,14 +1,18 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/atoms/language-switcher";
 
 export const Navbar = () => {
+  const t = useTranslations();
+
   return (
     <nav className="flex items-center gap-10">
       <ul className="flex items-center gap-10">
         <li>
           <Link href="/documents" className="hover:text-[#1570EF]">
-            Документы
+            {t("documents")}
           </Link>
         </li>
 

@@ -1,20 +1,30 @@
+"use client";
+import { useRouter, usePathname } from "next/navigation";
+
+const languages = [
+  { code: "ru", label: "РУС" },
+  { code: "kg", label: "КЫР" },
+  { code: "en", label: "ENG" },
+];
 
 export const LanguageSwitcher = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const currentLang = pathname.split("/")[1];
 
   return (
     <div className="inline-flex bg-[#F2F4F7] rounded-xl p-0.5">
-      {["RUS", "KYP", "ENG"].map((lang) => (
+      {languages.map((lang) => (
         <button
-          key={lang}
-          onClick={() => setActive(lang as "RUS" | "KYP" | "ENG")}
-          className={`px-3 py-2 rounded-xl transition-colors
-            ${
-              active === lang
-                ? "bg-white text-[#1570EF]"
-                : "text-[#101828B2] cursor-pointer"
-            }`}
+          key={lang.code}
+          onClick={() => router.push(`/${lang.code}${pathname.slice(3)}`)}
+          className={`px-3 py-2 rounded-xl transition-colors ${
+            currentLang === lang.code
+              ? "bg-white text-[#1570EF]"
+              : "text-[#101828B2] cursor-pointer"
+          }`}
         >
-          {lang === "RUS" ? "РУС" : lang === "KYP" ? "КЫР" : "ENG"}
+          {lang.label}
         </button>
       ))}
     </div>
