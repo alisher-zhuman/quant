@@ -55,3 +55,9 @@ export const METADATA: Metadata = {
     canonical: "https://quant.kg",
   },
 };
+
+export const LANGUAGES = [
+  { code: "ru", label: "РУС" },
+  { code: "kg", label: "КЫР" },
+  { code: "en", label: "ENG" },
+];

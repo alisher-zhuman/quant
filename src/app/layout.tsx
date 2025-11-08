@@ -17,7 +17,7 @@ interface Props {
 
 const RootLayout = ({ children }: Readonly<Props>) => {
   return (
-    <html lang="ru" className={rubik.variable}>
+    <html className={rubik.variable}>
       <body>{children}</body>
     </html>
   );
