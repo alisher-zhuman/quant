@@ -1,16 +1,27 @@
 import "./globals.css";
 import { ReactNode } from "react";
+import { Rubik } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { routing } from "@/i18n/routing";
+import { routing } from "../../i18n/routing";
+import { METADATA } from "@/utils/constants";
+
+const rubik = Rubik({
+  subsets: ["latin", "cyrillic"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-rubik",
+});
+
+export const metadata = METADATA;
 
 interface Props {
   children: ReactNode;
   params: Promise<{ locale: string }>;
 }
 
-const RootLayout = async ({ children, params }: Readonly<Props>) => {
+const LocaleLayout = async ({ children, params }: Readonly<Props>) => {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
@@ -20,10 +31,14 @@ const RootLayout = async ({ children, params }: Readonly<Props>) => {
   const messages = await getMessages({ locale });
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      {children}
-    </NextIntlClientProvider>
+    <html lang={locale} className={rubik.variable}>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 };
 
-export default RootLayout;
+export default LocaleLayout;
