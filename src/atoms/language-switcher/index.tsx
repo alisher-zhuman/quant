@@ -14,12 +14,12 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="inline-flex bg-[#F2F4F7] rounded-xl p-1">
+    <div className="w-full lg:w-fit inline-flex bg-[#F2F4F7] rounded-xl p-1">
       {LANGUAGES.map(({ code, label }) => (
         <button
           key={code}
           onClick={() => onLanguageChange(code)}
-          className={`px-3 py-1 rounded-xl transition-colors ${
+          className={`flex-1 px-3 py-1 rounded-xl transition-colors ${
             currentLang === code
               ? "bg-white text-[#1570EF] font-medium"
               : "text-[#101828B2] cursor-pointer"
