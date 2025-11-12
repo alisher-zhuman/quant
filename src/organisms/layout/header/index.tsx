@@ -2,15 +2,18 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Navbar } from "@/molecules/navbar";
-import { AdviceButton } from "@/atoms/advice-button";
+import { Button } from "@/atoms/button";
 import { cn } from "@/utils/helpers";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const t = useTranslations();
+
   return (
-    <header className="py-4 px-2 lgx:px-10 flex items-center justify-between sticky top-0 bg-white z-50">
+    <header className="py-4 pl-4.5 lgx:pl-9.5 pr-5 lgx:pr-10 flex items-center justify-between sticky top-0 bg-white z-50">
       <Link href="/">
         <Image
           src="/icons/logo.svg"
@@ -21,10 +24,15 @@ export const Header = () => {
         />
       </Link>
 
-      <div className="flex items-center gap-4 lg:gap-3">
+      <div className="flex items-center gap-1 sm:gap-4 lg:gap-3">
         <Navbar />
 
-        <AdviceButton onClick={() => console.log("Hi")} />
+        <Button
+          className="text-sm sm:text-base"
+          onClick={() => console.log("Hi")}
+        >
+          {t("Получить консультацию")}
+        </Button>
 
         <button
           className="lg:hidden cursor-pointer"
@@ -69,7 +77,9 @@ export const Header = () => {
           </button>
         </div>
 
-        <AdviceButton className="mt-2" onClick={() => console.log("Hi")} />
+        <Button className="mt-2" onClick={() => console.log("Hi")}>
+          {t("Получить консультацию")}
+        </Button>
 
         <Navbar mobile closeMenu={() => setIsMenuOpen(false)} />
       </div>

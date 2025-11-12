@@ -20,12 +20,12 @@ const Documents = () => {
             key={index}
             href={file}
             download
-            className="cursor-pointer flex md:flex-col border border-[#E4E7EC] rounded-3xl p-3 md:p-6 gap-2 items-start hover:shadow-lg transition-shadow"
+            className="cursor-pointer flex md:flex-col border border-[#E4E7EC] rounded-3xl p-3 md:p-6 gap-2 items-center md:items-start hover:shadow-lg transition-shadow"
           >
             <Image
               src="/icons/pdf.svg"
               alt="PDF"
-              className="mb-3"
+              className="md:mb-3"
               width={24}
               height={24}
             />

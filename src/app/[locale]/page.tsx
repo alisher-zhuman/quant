@@ -1,5 +1,11 @@
+import { Intro } from "@/organisms/modules/intro";
+
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <Intro />
+    </>
+  );
 };
 
 export default Home;
