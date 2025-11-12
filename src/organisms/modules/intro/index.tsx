@@ -32,7 +32,7 @@ export const Intro = () => {
       </section>
 
       <Modal isOpen={isOpen} onClose={toggleModal}>
-        <FormModal />
+        <FormModal toggleModal={toggleModal}/>
       </Modal>
     </>
   );

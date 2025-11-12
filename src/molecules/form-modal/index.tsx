@@ -1,36 +1,78 @@
+"use client";
+import { FormEvent, useRef, useState } from "react";
+import toast from "react-hot-toast";
+import { useTranslations } from "next-intl";
+import { sendEmail } from "@/api";
 import { Button } from "@/atoms/button";
+import { NameInput } from "@/atoms/name-input";
+import { PhoneInput } from "@/atoms/phone-input";
+import { checkFormValid } from "@/utils/helpers";
 
-export const FormModal = () => {
+interface Props {
+  toggleModal: () => void;
+}
+
+export const FormModal = ({ toggleModal }: Props) => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("+996");
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const t = useTranslations();
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!formRef.current) return;
+
+    setLoading(true);
+
+    try {
+      await sendEmail(formRef.current);
+      toast.success("Заявка отправлена! 🚀");
+      toggleModal();
+      formRef.current.reset();
+      setName("");
+      setPhone("+996");
+    } catch (err) {
+      const error = err as { text?: string };
+      setErrorMessage(error.text ?? "Неизвестная ошибка");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       <p className="text-center font-medium text-base md:text-xl">
-        Заполните заявку и мы свяжемся с вами
+        {t("Заполните заявку и мы свяжемся с вами")}
       </p>
 
-      <form className="mt-8">
-        <input
-          type="text"
-          placeholder="Как к вам обращаться?"
-          className="p-3 md:py-4 md:px-5 w-full mb-4 bg-[#F2F4F7] rounded-xl"
-        />
-
-        <input
-          type="phone"
-          placeholder="+996555000111"
-          className="p-3 md:py-4 md:px-5 w-full mb-6 bg-[#F2F4F7] rounded-xl"
-        />
+      <form ref={formRef} className="mt-8" onSubmit={handleSubmit}>
+        <NameInput value={name} onChange={setName} />
+        <PhoneInput value={phone} onChange={setPhone} />
 
         <Button
           type="submit"
-          disabled
+          disabled={loading || !checkFormValid(phone, name)}
           className="w-full py-3.5 md:py-4.5 font-medium disabled:bg-[#F2F4F7] disabled:text-[#10182880] disabled:cursor-not-allowed"
         >
-          Отправить заявку
+          {loading ? t("Отправляем") + "..." : t("Отправить заявку")}
         </Button>
+
+        {errorMessage && (
+          <p className="my-2.5 text-red-500">
+            {t("Ошибка")}: {errorMessage}
+          </p>
+        )}
       </form>
 
       <p className="text-sm mt-3 text-center text-[#101828B2]">
-        Нажимая “Отправить заявку” вы соглашаетесь с обработкой личных данных
+        {t(
+          "Нажимая “Отправить заявку” вы соглашаетесь с обработкой личных данных"
+        )}
       </p>
     </div>
   );

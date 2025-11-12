@@ -4,6 +4,7 @@ import { Rubik } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Toaster } from "react-hot-toast";
 import { Header } from "@/organisms/layout/header";
 import { METADATA } from "@/utils/constants";
 import { routing } from "@/i18n/routing";
@@ -39,6 +40,8 @@ const LocaleLayout = async ({ children, params }: Readonly<Props>) => {
             <Header />
 
             {children}
+
+            <Toaster />
           </main>
         </NextIntlClientProvider>
       </body>

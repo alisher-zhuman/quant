@@ -1,11 +1,9 @@
 import { Intro } from "@/organisms/modules/intro";
 
-const Home = () => {
-  return (
-    <>
-      <Intro />
-    </>
-  );
-};
+const Home = () => (
+  <>
+    <Intro />
+  </>
+);
 
 export default Home;

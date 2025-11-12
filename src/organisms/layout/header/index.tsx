@@ -83,7 +83,7 @@ export const Header = () => {
       </header>
 
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
-        <FormModal />
+        <FormModal toggleModal={toggleModal}/>
       </Modal>
     </>
   );
