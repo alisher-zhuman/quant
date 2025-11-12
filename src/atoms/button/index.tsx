@@ -1,15 +1,14 @@
 import { cn } from "@/utils/helpers";
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface Props {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  onClick: () => void;
   className?: string;
 }
 
-export const Button = ({ children, onClick, className }: Props) => (
+export const Button = ({ children, className, ...props }: Props) => (
   <button
-    onClick={onClick}
+    {...props}
     className={cn(
       "py-1.5 px-3.5 md:py-2 md:px-4 text-white bg-[#1570EF] hover:bg-[#1056c2] transition cursor-pointer rounded-xl",
       className

@@ -84,6 +84,7 @@ export const Navbar = ({ mobile, closeMenu }: Props) => {
               onClick={() => closeMenu?.()}
             >
               {t("Где купить")}
+
               {mobile && (
                 <Image
                   src="/icons/arrow.svg"
