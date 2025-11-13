@@ -1,16 +1,20 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const Addresses = () => {
   const router = useRouter();
+  const t = useTranslations();
 
   return (
     <section className="pl-3.5 pr-2 mt-2 md:mt-5 lgx:pr-10 lgx:pl-12">
       <button onClick={() => router.back()} className="cursor-pointer mb-3">
-        ← Назад
+        ← {t("Назад")}
       </button>
 
-      <h1 className="text-xl md:text-3xl font-semibold mb-2">Где купить</h1>
+      <h1 className="text-xl md:text-3xl font-semibold mb-4">
+        {t("Где купить")}
+      </h1>
 
       <div className="flex flex-col md:flex-row gap-5 justify-between md:items-center">
         <div className="flex-1">
@@ -20,11 +24,11 @@ const Addresses = () => {
           />
 
           <p className="font-semibold mt-2 md:text-center">
-            г.Бишкек ТЦ “БУМ” ЗАПАД бутик Д20 4 этаж
+            {t("г_Бишкек_ТЦ_БУМ_ЗАПАД_бутик_Д20_4_этаж")}
           </p>
 
           <p className="text-[#101828B2] md:text-center">
-            Ежедневно с 09:00 до 18:00
+            {t("Ежедневно с 09:00 до 18:00")}
           </p>
         </div>
 
@@ -35,11 +39,11 @@ const Addresses = () => {
           />
 
           <p className="font-semibold mt-2 md:text-center">
-            г.Манас ТЦ “Келечек”, ул.Байзакова 10/55А
+            {t("г_Манас_ТЦ_Келечек_ул_Байзакова_10_55А")}
           </p>
 
           <p className="text-[#101828B2] md:text-center">
-            Ежедневно с 09:00 до 18:00
+            {t("Ежедневно с 09:00 до 18:00")}
           </p>
         </div>
       </div>
