@@ -15,9 +15,9 @@ export const LanguageSwitcher = () => {
 
   return (
     <div className="w-full lg:w-fit inline-flex bg-[#F2F4F7] rounded-xl p-1">
-      {LANGUAGES.map(({ code, label }) => (
+      {LANGUAGES.map(({ code, label }, i) => (
         <button
-          key={code}
+          key={i}
           onClick={() => onLanguageChange(code)}
           className={`flex-1 px-3 py-1 rounded-xl transition-colors ${
             currentLang === code

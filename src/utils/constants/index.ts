@@ -94,3 +94,42 @@ export const DOCUMENTS = [
     file: "/files/Описание типа СВУ.pdf",
   },
 ];
+
+export const EQUIPMENTS = [
+  {
+    name: "first_equipment",
+    image: "/images/first_equipment.png",
+    certificate: "/files/first_equipment_certificate.pdf",
+    instruction: "/files/first_equipment_instruction.pdf",
+  },
+  {
+    name: "second_equipment",
+    image: "/images/second_equipment.png",
+    certificate: "/files/second_equipment_certificate.pdf",
+    instruction: "/files/second_equipment_instruction.pdf",
+  },
+  {
+    name: "third_equipment",
+    image: "/images/third_equipment.png",
+    certificate: "/files/third_equipment_certificate.pdf",
+    instruction: "/files/third_equipment_instruction.pdf",
+  },
+  {
+    name: "fourth_equipment",
+    image: "/images/fourth_equipment.png",
+    certificate: "/files/fourth_equipment_certificate.pdf",
+    instruction: "/files/fourth_equipment_instruction.pdf",
+  },
+  {
+    name: "fifth_equipment",
+    image: "/images/fifth_equipment.png",
+    certificate: "/files/fifth_equipment_certificate.pdf",
+    instruction: "/files/fifth_equipment_instruction.pdf",
+  },
+  {
+    name: "sixth_equipment",
+    image: "/images/sixth_equipment.png",
+    certificate: "/files/sixth_equipment_certificate.pdf",
+    instruction: "/files/sixth_equipment_instruction.pdf",
+  },
+];

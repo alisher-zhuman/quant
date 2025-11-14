@@ -19,9 +19,9 @@ const Documents = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
-        {DOCUMENTS.map(({ file, titleKey, pages, size }, index) => (
+        {DOCUMENTS.map(({ file, titleKey, pages, size }, i) => (
           <a
-            key={index}
+            key={i}
             href={file}
             download
             className="cursor-pointer flex md:flex-col border border-[#E4E7EC] rounded-3xl p-3 md:p-6 gap-2 items-center md:items-start hover:shadow-lg transition-shadow"

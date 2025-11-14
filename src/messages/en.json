@@ -21,5 +21,14 @@
   "sertifikat_svk15u": "SVK15U Certificate",
   "sertifikat_sv15u": "SV15U Certificate",
   "opisanie_svu": "SVU Type Description",
-  "МБ": "MB"
+  "МБ": "MB",
+  "Оборудование": "Equipment",
+  "first_equipment": "KVANT -SMART SVK -15U with GSM-BOX",
+  "second_equipment": "SMART SVK -15U meter",
+  "third_equipment": "SMART SVK -15U meter with GSM-BOX",
+  "fourth_equipment": "SMART SVK -15U meter",
+  "fifth_equipment": "GSM-BOX",
+  "sixth_equipment": "Electromagnetic valve for opening and closing",
+  "Сертификат": "Certificate",
+  "Инструкции": "Instructions"
 }
