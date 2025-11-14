@@ -30,5 +30,18 @@
   "fifth_equipment": "GSM-BOX",
   "sixth_equipment": "Electromagnetic valve for opening and closing",
   "Сертификат": "Certificate",
-  "Инструкции": "Instructions"
+  "Инструкции": "Instructions",
+  "Преимущества продукта": "Product Advantages",
+  "Автономная передача данных": "Autonomous Data Transmission",
+  "Работает по GSM, не требует Wi‑Fi или проводов": "Works via GSM, no Wi‑Fi or wires required",
+  "IP68 – полная защита": "IP68 – Full Protection",
+  "Не боится погружения в воду, работает в колодцах и на улице": "Waterproof, works in wells and outdoors",
+  "6 лет без замены батареи": "6 years without battery replacement",
+  "Энергоэффективный – рассчитан на годы работы": "Energy-efficient – designed for years of operation",
+  "Интеграция в умный дом": "Smart Home Integration",
+  "Совместим с системами Smart City и любым софтом через API": "Compatible with Smart City systems and any software via API",
+  "Точный учет и контроль": "Accurate Tracking and Control",
+  "Двойной механизм (механика+электроника) обеспечивает точность; защита от вмешательства": "Dual mechanism (mechanical + electronic) ensures accuracy; tamper protection",
+  "Для дома и для бизнеса": "For Home and Business",
+  "Подходит для квартир, коттеджей, ЖК, коммерческих и муниципальных объектов": "Suitable for apartments, cottages, residential complexes, commercial and municipal properties"
 }

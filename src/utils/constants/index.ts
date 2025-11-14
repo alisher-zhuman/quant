@@ -133,3 +133,38 @@ export const EQUIPMENTS = [
     instruction: "/files/sixth_equipment_instruction.pdf",
   },
 ];
+
+export const ADVANTAGES = [
+  {
+    title: "Автономная передача данных",
+    description: "Работает по GSM, не требует Wi‑Fi или проводов",
+    icon: "/icons/first-advantage.svg",
+  },
+  {
+    title: "IP68 – полная защита",
+    description: "Не боится погружения в воду, работает в колодцах и на улице",
+    icon: "/icons/second-advantage.svg",
+  },
+  {
+    title: "6 лет без замены батареи",
+    description: "Энергоэффективный – рассчитан на годы работы",
+    icon: "/icons/third-advantage.svg",
+  },
+  {
+    title: "Интеграция в умный дом",
+    description: "Совместим с системами Smart City и любым софтом через API",
+    icon: "/icons/fourth-advantage.svg",
+  },
+  {
+    title: "Точный учет и контроль",
+    description:
+      "Двойной механизм (механика+электроника) обеспечивает точность; защита от вмешательства",
+    icon: "/icons/fifth-advantage.svg",
+  },
+  {
+    title: "Для дома и для бизнеса",
+    description:
+      "Подходит для квартир, коттеджей, ЖК, коммерческих и муниципальных объектов",
+    icon: "/icons/sixth-advantage.svg",
+  },
+];
