@@ -1,21 +1,25 @@
 "use client";
-import { useRouter } from "next/navigation";
-import { DOCUMENTS } from "@/utils/constants";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { DOCUMENTS } from "@/utils/constants";
 
 const Documents = () => {
   const router = useRouter();
+  const t = useTranslations();
 
   return (
     <section className="pl-3.5 pr-2 mt-2 md:mt-5 lgx:pr-10 lgx:pl-12">
       <button onClick={() => router.back()} className="cursor-pointer mb-3">
-        ← Назад
+        ← {t("Назад")}
       </button>
 
-      <h1 className="text-xl md:text-3xl font-semibold mb-6">Документы</h1>
+      <h1 className="text-xl md:text-3xl font-semibold mb-6">
+        {t("Документы")}
+      </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
-        {DOCUMENTS.map(({ file, title, pages, size }, index) => (
+        {DOCUMENTS.map(({ file, titleKey, pages, size }, index) => (
           <a
             key={index}
             href={file}
@@ -31,10 +35,12 @@ const Documents = () => {
             />
 
             <div>
-              <h2 className="font-semibold md:text-lg mb-1">{title}</h2>
+              <h2 className="font-semibold md:text-lg mb-1">
+                {t(`${titleKey}`)}
+              </h2>
 
               <p className="text-sm text-gray-600">
-                {pages} страницы - {size}
+                {pages} {t("страницы")} - {size.replace("МБ", t("МБ"))}
               </p>
             </div>
           </a>
