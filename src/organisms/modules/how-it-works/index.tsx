@@ -10,7 +10,6 @@ import { HOW_IT_WORKS } from "@/utils/constants";
 
 const HowItWorks = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const t = useTranslations();
 
   const toggleModal = () => setIsOpen((prev) => !prev);
@@ -27,8 +26,9 @@ const HowItWorks = () => {
             <div
               key={i}
               className={cn(
-                "p-4 md:p-6 border border-[#E4E7EC] rounded-3xl w-[440px] flex flex-col",
-                icon || "md:justify-center md:items-center"
+                "p-4 md:p-6 border border-[#E4E7EC] rounded-3xl w-[440px] flex flex-col justify-start",
+                icon ||
+                  "justify-start items-start md:items-center md:justify-center "
               )}
             >
               {icon && (
@@ -45,15 +45,13 @@ const HowItWorks = () => {
                 {t(title)}
               </p>
 
-              <p className="text-[#101828B2] mt-1 text-sm md:text-base md:mt-2 grow">
+              <p className="text-[#101828B2] mt-1 text-sm md:text-base md:mt-2">
                 {t(description)}
               </p>
 
-              {icon ? (
-                ""
-              ) : (
+              {!icon && (
                 <Button
-                  className="mt-6 w-full md:w-[60%] md:mt-0"
+                  className="mt-4 w-full md:w-[60%]"
                   onClick={toggleModal}
                 >
                   {t("Получить консультацию")}
