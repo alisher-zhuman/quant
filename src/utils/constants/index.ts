@@ -168,3 +168,42 @@ export const ADVANTAGES = [
     icon: "/icons/sixth-advantage.svg",
   },
 ];
+
+export const HOW_IT_WORKS = [
+  {
+    id: 1,
+    title: "Измерение",
+    description: "Измерение_описание",
+    icon: "/icons/how-it-works-1.svg",
+  },
+  {
+    id: 2,
+    title: "Сбор и шифрование",
+    description: "Сбор_описание",
+    icon: "/icons/how-it-works-2.svg",
+  },
+  {
+    id: 3,
+    title: "Отправка данных",
+    description: "Отправка_описание",
+    icon: "/icons/how-it-works-3.svg",
+  },
+  {
+    id: 4,
+    title: "Обработка и учет",
+    description: "Обработка_описание",
+    icon: "/icons/how-it-works-4.svg",
+  },
+  {
+    id: 5,
+    title: "Контроль состояния",
+    description: "Контроль_описание",
+    icon: "/icons/how-it-works-5.svg",
+  },
+  {
+    id: 6,
+    title: "Получите консультацию",
+    description: "Получите_описание",
+    icon: null,
+  },
+];

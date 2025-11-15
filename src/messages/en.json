@@ -43,5 +43,18 @@
   "Точный учет и контроль": "Accurate Tracking and Control",
   "Двойной механизм (механика+электроника) обеспечивает точность; защита от вмешательства": "Dual mechanism (mechanical + electronic) ensures accuracy; tamper protection",
   "Для дома и для бизнеса": "For Home and Business",
-  "Подходит для квартир, коттеджей, ЖК, коммерческих и муниципальных объектов": "Suitable for apartments, cottages, residential complexes, commercial and municipal properties"
+  "Подходит для квартир, коттеджей, ЖК, коммерческих и муниципальных объектов": "Suitable for apartments, cottages, residential complexes, commercial and municipal properties",
+  "Как это работает": "How it works",
+  "Измерение": "Measurement",
+  "Измерение_описание": "The built-in measuring module calculates consumption; the data is displayed on the mechanical panel and stored in electronic memory",
+  "Сбор и шифрование": "Collection and encryption",
+  "Сбор_описание": "The electronic board regularly reads the data, checks for errors, and stores it. Before transmission, the data is encrypted for safety",
+  "Отправка данных": "Data transmission",
+  "Отправка_описание": "The meter sends readings via GSM/GPRS to the service provider’s server on schedule. The user does not participate in this process",
+  "Обработка и учет": "Processing and accounting",
+  "Обработка_описание": "The utility company’s server receives the readings, links them to your personal account, and uses them to calculate charges",
+  "Контроль состояния": "Status monitoring",
+  "Контроль_описание": "The meter reports its status: low battery, tampering attempts, or transmission errors",
+  "Получите консультацию": "Get a consultation",
+  "Получите_описание": "Fill out the form and we will contact you"
 }
