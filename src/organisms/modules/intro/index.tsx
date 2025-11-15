@@ -54,15 +54,17 @@ export const Intro = () => {
         <FormModal toggleModal={toggleFormModal} />
       </Modal>
 
-      <Modal isOpen={isVideoOpen} onClose={toggleVideoModal}>
-        <div className="w-full h-full flex justify-center items-center">
-          <video
-            src="/videos/intro.mp4"
-            controls
-            autoPlay
-            className="w-full max-w-3xl rounded-lg"
-          />
-        </div>
+      <Modal
+        isOpen={isVideoOpen}
+        onClose={toggleVideoModal}
+        contentClassName="md:w-[95%] md:max-w-[95vw] md:h-[90vh] md:p-5 flex justify-center items-center"
+      >
+        <video
+          src="/videos/intro.mp4"
+          controls
+          autoPlay
+          className="w-full h-full object-contain rounded-xl"
+        />
       </Modal>
     </>
   );
