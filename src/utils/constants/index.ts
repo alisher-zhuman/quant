@@ -317,3 +317,14 @@ export const WHY_US = [
     icon: "/icons/fifth-why.svg",
   },
 ];
+
+export const VIDEOS = [
+  { src: "/videos/first.mp4", text: "Настройка микросхем для работы" },
+  { src: "/videos/second.mp4", text: "Настройка микросхем для работы" },
+  { src: "/videos/third.mp4", text: "Настройка микросхем для работы" },
+  { src: "/videos/fourth.mp4", text: "Настройка микросхем для работы" },
+  { src: "/videos/fifth.mp4", text: "Настройка микросхем для работы" },
+  { src: "/videos/sixth.mp4", text: "Настройка микросхем для работы" },
+  { src: "/videos/seventh.mp4", text: "Настройка микросхем для работы" },
+  { src: "/videos/eighth.mp4", text: "Настройка микросхем для работы" },
+];

@@ -10,6 +10,7 @@ const Consultation = dynamic(() => import("@/organisms/modules/consultation"));
 const Areas = dynamic(() => import("@/organisms/modules/areas"));
 const TechSpecs = dynamic(() => import("@/organisms/modules/tech-specs"));
 const WhyUs = dynamic(() => import("@/organisms/modules/why-us"));
+const Gallery = dynamic(() => import("@/organisms/modules/gallery"));
 
 const Home = () => {
   useScrollRestorer();
@@ -24,6 +25,7 @@ const Home = () => {
       <Areas />
       <TechSpecs />
       <WhyUs />
+      <Gallery />
     </>
   );
 };
