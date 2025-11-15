@@ -6,6 +6,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Toaster } from "react-hot-toast";
 import { Header } from "@/organisms/layout/header";
+import { Footer } from "@/organisms/layout/footer";
 import { METADATA } from "@/utils/constants";
 import { routing } from "@/i18n/routing";
 
@@ -36,13 +37,15 @@ const LocaleLayout = async ({ children, params }: Readonly<Props>) => {
     <html lang={locale} className={rubik.variable}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <main>
+          <main className="min-h-screen">
             <Header />
 
             {children}
 
-            <Toaster />
+            <Footer />
           </main>
+
+          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>

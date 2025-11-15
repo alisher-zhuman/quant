@@ -19,7 +19,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="py-4 pl-4.5 lgx:pl-9.5 pr-5 lgx:pr-10 flex items-center justify-between sticky top-0 bg-white z-50">
+      <header className="max-w-[1600px] m-auto py-4 pl-4.5 lgx:pl-9.5 pr-5 lgx:pr-10 flex items-center justify-between sticky top-0 bg-white z-50">
         <Link href="/">
           <Image
             src="/icons/logo.svg"

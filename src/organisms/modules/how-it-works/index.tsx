@@ -16,7 +16,7 @@ const HowItWorks = () => {
 
   return (
     <>
-      <section className="px-5 lgx:px-10 my-20 md:my-32">
+      <section className="px-5 lgx:px-10 my-20 md:my-32 max-w-[1600px] m-auto">
         <h1 className="text-2xl md:text-3xl font-medium text-center">
           {t("Как это работает")}
         </h1>

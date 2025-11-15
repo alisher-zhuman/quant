@@ -6,7 +6,7 @@ const Consultation = () => {
   const t = useTranslations();
 
   return (
-    <section className="px-5 lgx:px-10 my-20 md:my-32">
+    <section className="px-5 lgx:px-10 my-20 md:my-32 max-w-[1600px] m-auto">
       <div className="rounded-4xl md:border border-[#E4E7EC] md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
         <div>
           <h1 className="text-xl md:text-3xl font-medium">

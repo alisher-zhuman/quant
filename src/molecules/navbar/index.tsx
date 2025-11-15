@@ -100,7 +100,6 @@ export const Navbar = ({ mobile, closeMenu }: Props) => {
     );
   }
 
-  // Десктоп
   return (
     <nav className="hidden lg:flex items-center gap-3 lgx:gap-10">
       <ul className="flex items-center gap-3 lgx:gap-10">

@@ -5,7 +5,7 @@ const TechSpecs = () => {
   const t = useTranslations();
 
   return (
-    <section className="px-5 lgx:px-10 my-20 md:my-32">
+    <section className="max-w-[1600px] m-auto px-5 lgx:px-10 my-20 md:my-32">
       <h1 className="text-2xl md:text-3xl font-medium text-center">
         {t("Технические характеристики")}
       </h1>
@@ -29,7 +29,7 @@ const TechSpecs = () => {
             </p>
           </div>
         ))}
-      </div> 
+      </div>
     </section>
   );
 };
