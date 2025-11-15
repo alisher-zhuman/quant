@@ -289,3 +289,31 @@ export const TECH_SPECS = [
       "Полная герметичность – может быть погружен в воду, допускается установка в затапливаемых колодцах",
   },
 ];
+
+export const WHY_US = [
+  {
+    title: "Локальный производитель",
+    descriptionKey: "why_local",
+    icon: "/icons/first-why.svg",
+  },
+  {
+    title: "Современные технологии – ваше конкурентное преимущество",
+    descriptionKey: "why_tech",
+    icon: "/icons/second-why.svg",
+  },
+  {
+    title: "Надежный партнер для роста",
+    descriptionKey: "why_partner",
+    icon: "/icons/third-why.svg",
+  },
+  {
+    title: "Экономическая выгода для застройщика",
+    descriptionKey: "why_profit",
+    icon: "/icons/fourth-why.svg",
+  },
+  {
+    title: "Соответствие нормативам и требованиям",
+    descriptionKey: "why_standards",
+    icon: "/icons/fifth-why.svg",
+  },
+];
