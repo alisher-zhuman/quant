@@ -10,6 +10,9 @@ export const LanguageSwitcher = () => {
   const currentLang = useLocale();
 
   const onLanguageChange = (nextLang: string) => {
+    if (nextLang === currentLang) return;
+
+    sessionStorage.setItem("scrollY", window.scrollY.toString());
     router.replace(pathname.replace(/^\/[a-z]{2}/, `/${nextLang}`));
   };
 
