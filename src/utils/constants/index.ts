@@ -207,3 +207,31 @@ export const HOW_IT_WORKS = [
     icon: null,
   },
 ];
+
+export const AREAS = [
+  {
+    title: "Квартиры и многоквартирные дома",
+    description: "Автоматизация снятия показаний и выставления счетов в ЖК",
+    icon: "/icons/first-area.svg",
+  },
+  {
+    title: "Частные дома и коттеджи",
+    description: "Удобный мониторинг через смартфон для домовладельцев",
+    icon: "/icons/second-area.svg",
+  },
+  {
+    title: "Коммерческая недвижимость",
+    description: "Удаленный контроль потребления в бизнес-центрах, ТРЦ",
+    icon: "/icons/third-area.svg",
+  },
+  {
+    title: "Муниципальные объекты",
+    description: "Снижение затрат на персонал и потерь воды",
+    icon: "/icons/fourth-area.svg",
+  },
+  {
+    title: "Промышленные предприятия",
+    description: "Интеграция в систему учета ресурсов предприятия",
+    icon: "/icons/fifth-area.svg",
+  },
+];

@@ -1,21 +1,21 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ADVANTAGES } from "@/utils/constants";
+import { AREAS } from "@/utils/constants";
 
-const Advantages = () => {
+const Areas = () => {
   const t = useTranslations();
 
   return (
     <section className="px-5 lgx:px-10 my-20 md:my-32">
       <h1 className="text-2xl md:text-3xl font-medium text-center">
-        {t("Преимущества продукта")}
+        {t("Области применения")}
       </h1>
 
-      <div className="mt-4 md:mt-8 flex flex-wrap items-stretch justify-between gap-3 md:gap-5">
-        {ADVANTAGES.map(({ title, icon, description }, i) => (
+      <div className="mt-4 md:mt-8 flex flex-wrap items-stretch justify-center gap-3 md:gap-5">
+        {AREAS.map(({ title, icon, description }, i) => (
           <div
             key={i}
-            className="p-4 md:p-6 border border-[#E4E7EC] rounded-3xl w-[440px] flex flex-col"
+            className="p-4 md:p-6 border border-[#E4E7EC] rounded-3xl w-[440px] flex flex-col md:justify-center md:items-center"
           >
             <Image
               src={icon}
@@ -29,7 +29,7 @@ const Advantages = () => {
               {t(title)}
             </p>
 
-            <p className="text-[#101828B2] mt-1 text-sm md:text-base md:mt-2 grow">
+            <p className="text-[#101828B2] mt-1 text-sm md:text-base md:mt-2 grow md:text-center">
               {t(description)}
             </p>
           </div>
@@ -39,4 +39,4 @@ const Advantages = () => {
   );
 };
 
-export default Advantages;
+export default Areas;
