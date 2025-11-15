@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { FormModal } from "@/molecules/form-modal";
+import { ConsultationForm } from "@/molecules/consultation-form";
 import { Button } from "@/atoms/button";
 import { Modal } from "@/atoms/modal";
 import { cn } from "@/utils/helpers";
@@ -17,11 +17,11 @@ const HowItWorks = () => {
   return (
     <>
       <section className="px-5 lgx:px-10 my-20 md:my-32">
-        <h1 className="text-[#101828] text-2xl md:text-3xl font-medium text-center">
+        <h1 className="text-2xl md:text-3xl font-medium text-center">
           {t("Как это работает")}
         </h1>
 
-        <div className="mt-4 md:mt-8 flex flex-wrap items-stretch justify-center gap-3 md:gap-5">
+        <div className="mt-4 md:mt-8 flex flex-wrap items-stretch justify-between gap-3 md:gap-5">
           {HOW_IT_WORKS.map(({ title, icon, description }, i) => (
             <div
               key={i}
@@ -63,7 +63,7 @@ const HowItWorks = () => {
       </section>
 
       <Modal isOpen={isOpen} onClose={toggleModal}>
-        <FormModal toggleModal={toggleModal} />
+        <ConsultationForm toggleModal={toggleModal} />
       </Modal>
     </>
   );

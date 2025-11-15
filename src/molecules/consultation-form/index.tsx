@@ -6,13 +6,14 @@ import { sendEmail } from "@/api";
 import { Button } from "@/atoms/button";
 import { NameInput } from "@/atoms/name-input";
 import { PhoneInput } from "@/atoms/phone-input";
-import { checkFormValid } from "@/utils/helpers";
+import { checkFormValid, cn } from "@/utils/helpers";
 
 interface Props {
-  toggleModal: () => void;
+  toggleModal?: () => void;
+  titleIsVisible?: boolean;
 }
 
-export const FormModal = ({ toggleModal }: Props) => {
+export const ConsultationForm = ({ toggleModal, titleIsVisible }: Props) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("+996");
   const [loading, setLoading] = useState(false);
@@ -32,7 +33,7 @@ export const FormModal = ({ toggleModal }: Props) => {
     try {
       await sendEmail(formRef.current);
       toast.success("Заявка отправлена! 🚀");
-      toggleModal();
+      toggleModal?.();
       formRef.current.reset();
       setName("");
       setPhone("+996");
@@ -46,11 +47,17 @@ export const FormModal = ({ toggleModal }: Props) => {
 
   return (
     <div>
-      <p className="text-center font-medium text-base md:text-xl">
-        {t("Заполните заявку и мы свяжемся с вами")}
-      </p>
+      {titleIsVisible && (
+        <p className="text-center font-medium text-base md:text-xl">
+          {t("Заполните заявку и мы свяжемся с вами")}
+        </p>
+      )}
 
-      <form ref={formRef} className="mt-8" onSubmit={handleSubmit}>
+      <form
+        ref={formRef}
+        className={cn(titleIsVisible && "mt-8")}
+        onSubmit={handleSubmit}
+      >
         <NameInput value={name} onChange={setName} />
         <PhoneInput value={phone} onChange={setPhone} />
 

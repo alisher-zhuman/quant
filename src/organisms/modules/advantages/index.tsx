@@ -7,11 +7,11 @@ const Advantages = () => {
 
   return (
     <section className="px-5 lgx:px-10 my-20 md:my-32">
-      <h1 className="text-[#101828] text-2xl md:text-3xl font-medium text-center">
+      <h1 className="text-2xl md:text-3xl font-medium text-center">
         {t("Преимущества продукта")}
       </h1>
 
-      <div className="mt-4 md:mt-8 flex flex-wrap items-stretch justify-center gap-3 md:gap-5">
+      <div className="mt-4 md:mt-8 flex flex-wrap items-stretch justify-between gap-3 md:gap-5">
         {ADVANTAGES.map(({ title, icon, description }, i) => (
           <div
             key={i}

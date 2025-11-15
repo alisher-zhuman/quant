@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/atoms/button";
 import { Modal } from "@/atoms/modal";
-import { FormModal } from "@/molecules/form-modal";
+import { ConsultationForm } from "@/molecules/consultation-form";
 
 export const Intro = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -12,7 +12,7 @@ export const Intro = () => {
 
   const t = useTranslations();
 
-  const toggleFormModal = () => setIsFormOpen((prev) => !prev);
+  const toggleConsultationForm = () => setIsFormOpen((prev) => !prev);
 
   const toggleVideoModal = () => setIsVideoOpen((prev) => !prev);
 
@@ -30,13 +30,13 @@ export const Intro = () => {
         <div className="mt-10 flex flex-col md:flex-row items-center gap-3 md:gap-4">
           <Button
             className="py-3.5 px-2 w-full md:w-fit md:py-4.5 md:px-6.5"
-            onClick={toggleFormModal}
+            onClick={toggleConsultationForm}
           >
             {t("Получить консультацию")}
           </Button>
 
           <Button
-            className="flex items-center justify-center gap-2 py-3.5 px-2 w-full md:w-fit md:py-4.5 md:px-6.5 bg-white text-[#101828] hover:bg-gray-100"
+            className="flex items-center justify-center gap-2 py-3.5 px-2 w-full md:w-fit md:py-4.5 md:px-6.5 bg-white text-black hover:bg-gray-100"
             onClick={toggleVideoModal}
           >
             <Image
@@ -50,8 +50,8 @@ export const Intro = () => {
         </div>
       </section>
 
-      <Modal isOpen={isFormOpen} onClose={toggleFormModal}>
-        <FormModal toggleModal={toggleFormModal} />
+      <Modal isOpen={isFormOpen} onClose={toggleConsultationForm}>
+        <ConsultationForm toggleModal={toggleConsultationForm} />
       </Modal>
 
       <Modal

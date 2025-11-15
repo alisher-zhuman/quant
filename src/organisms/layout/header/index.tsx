@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Navbar } from "@/molecules/navbar";
-import { FormModal } from "@/molecules/form-modal";
+import { ConsultationForm } from "@/molecules/consultation-form";
 import { Button } from "@/atoms/button";
 import { Modal } from "@/atoms/modal";
 import { cn } from "@/utils/helpers";
@@ -83,7 +83,7 @@ export const Header = () => {
       </header>
 
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
-        <FormModal toggleModal={toggleModal}/>
+        <ConsultationForm toggleModal={toggleModal} />
       </Modal>
     </>
   );

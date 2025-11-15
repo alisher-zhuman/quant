@@ -8,7 +8,7 @@ const Equipment = () => {
 
   return (
     <section className="my-20 md:my-32">
-      <h1 className="text-[#101828] text-2xl md:text-3xl font-medium px-5 lgx:px-10">
+      <h1 className="text-2xl md:text-3xl font-medium px-5 lgx:px-10">
         {t("Оборудование")}
       </h1>
 
