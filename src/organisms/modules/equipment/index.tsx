@@ -19,8 +19,8 @@ const Equipment = () => {
               key={i}
               className={cn(
                 "w-56 md:w-80 shrink-0",
-                i === 0 && "ml-5",
-                i === EQUIPMENTS.length - 1 && "mr-5"
+                i === 0 && "ml-5 md:ml-0",
+                i === EQUIPMENTS.length - 1 && "mr-5 md:mr-0"
               )}
             >
               <div className="bg-[#F2F4F7] rounded-2xl flex items-center justify-center">

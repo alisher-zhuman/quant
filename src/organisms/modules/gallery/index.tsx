@@ -12,9 +12,9 @@ const Gallery = () => {
       </h1>
 
       <div className="mt-4 md:mt-8">
-        <div className="flex justify-center gap-3 md:gap-5 overflow-x-auto md:overflow-x-visible scroll-smooth snap-x snap-mandatory md:flex-wrap">
+        <div className="flex items-center gap-3 md:gap-5 overflow-x-auto md:overflow-x-visible scroll-smooth snap-x snap-mandatory md:flex-wrap">
           {VIDEOS.map(({ src, text }, i) => (
-            <div
+            <divk
               key={i}
               className={cn(
                 "w-80 shrink-0 flex flex-col",
@@ -31,7 +31,7 @@ const Gallery = () => {
               <p className="mt-2 md:mt-3 text-center">
                 {t(text)} {i + 1}
               </p>
-            </div>
+            </divk>
           ))}
         </div>
       </div>

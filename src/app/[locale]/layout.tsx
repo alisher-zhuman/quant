@@ -35,15 +35,13 @@ const LocaleLayout = async ({ children, params }: Readonly<Props>) => {
 
   return (
     <html lang={locale} className={rubik.variable}>
-      <body>
+      <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <main className="min-h-screen">
-            <Header />
+          <Header />
 
-            {children}
+          <main className="flex-1">{children}</main>
 
-            <Footer />
-          </main>
+          <Footer />
 
           <Toaster />
         </NextIntlClientProvider>

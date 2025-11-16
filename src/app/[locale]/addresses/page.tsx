@@ -17,7 +17,7 @@ const Addresses = () => {
         {t("Где купить")}
       </h1>
 
-      <div className="flex flex-col md:flex-row gap-5 justify-between md:items-center">
+      <div className="flex flex-col md:flex-row gap-5 justify-between md:items-center mb-10">
         <div className="flex-1">
           <iframe
             className="w-full rounded-2xl h-[200px] md:h-[400px] md:flex-1"

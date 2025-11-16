@@ -9,7 +9,7 @@ export const Footer = () => {
     <>
       <hr className="border-[#E4E7EC]" />
 
-      <footer className="max-w-[1600px] m-auto px-5 lgx:px-10 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <footer className="max-w-[1600px] w-full m-auto px-5 lgx:px-10 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <Link href="/">
           <Image
             src="/icons/logo.svg"

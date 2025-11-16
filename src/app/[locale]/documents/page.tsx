@@ -19,7 +19,7 @@ const Documents = () => {
         {t("Документы")}
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 mb-10">
         {DOCUMENTS.map(({ file, titleKey, pages, size }, i) => (
           <a
             key={i}
