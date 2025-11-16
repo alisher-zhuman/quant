@@ -18,7 +18,7 @@ export const Intro = () => {
 
   return (
     <>
-      <section className="px-5 lgx:px-10 bg-[url('/images/intro.png')] bg-cover bg-center h-[90vh] flex flex-col md:items-center md:justify-center">
+      <section className="px-5 lgx:px-10 bg-[url('/images/intro.webp')] bg-cover bg-center h-[90vh] flex flex-col md:items-center md:justify-center">
         <h1 className="font-semibold text-3xl md:text-5xl text-center text-white mt-20 md:mt-0 md:w-[686px]">
           {t("Интеллектуальный счетчик воды “КВАНТ”")}
         </h1>
