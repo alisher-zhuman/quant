@@ -4,10 +4,11 @@ import { useTranslations } from "next-intl";
 
 const Addresses = () => {
   const router = useRouter();
+
   const t = useTranslations();
 
   return (
-    <section className="max-w-[1600px] m-auto pl-3.5 pr-2 mt-2 md:mt-5 lgx:pr-10 lgx:pl-12 mb-20">
+    <section className="max-w-[1600px] m-auto pl-3.5 pr-2 mt-2 md:mt-5 lgx:pr-10 lgx:pl-12">
       <button onClick={() => router.back()} className="cursor-pointer mb-3">
         ← {t("Назад")}
       </button>
