@@ -319,12 +319,44 @@ export const WHY_US = [
 ];
 
 export const VIDEOS = [
-  { src: "/videos/first.mp4", text: "Настройка микросхем для работы" },
-  { src: "/videos/second.mp4", text: "Настройка микросхем для работы" },
-  { src: "/videos/third.mp4", text: "Настройка микросхем для работы" },
-  { src: "/videos/fourth.mp4", text: "Настройка микросхем для работы" },
-  { src: "/videos/fifth.mp4", text: "Настройка микросхем для работы" },
-  { src: "/videos/sixth.mp4", text: "Настройка микросхем для работы" },
-  { src: "/videos/seventh.mp4", text: "Настройка микросхем для работы" },
-  { src: "/videos/eighth.mp4", text: "Настройка микросхем для работы" },
+  {
+    src: "/videos/first.mp4",
+    text: "Настройка микросхем для работы",
+    poster: "/images/first-video-poster.png",
+  },
+  {
+    src: "/videos/second.mp4",
+    text: "Настройка микросхем для работы",
+    poster: "/images/second-video-poster.png",
+  },
+  {
+    src: "/videos/third.mp4",
+    text: "Настройка микросхем для работы",
+    poster: "/images/third-video-poster.png",
+  },
+  {
+    src: "/videos/fourth.mp4",
+    text: "Настройка микросхем для работы",
+    poster: "/images/fourth-video-poster.png",
+  },
+  {
+    src: "/videos/fifth.mp4",
+    text: "Настройка микросхем для работы",
+    poster: "/images/fifth-video-poster.png",
+  },
+  {
+    src: "/videos/sixth.mp4",
+    text: "Настройка микросхем для работы",
+    poster: "/images/sixth-video-poster.png",
+  },
+  {
+    src: "/videos/seventh.mp4",
+    text: "Настройка микросхем для работы",
+    poster: "/images/seventh-video-poster.png",
+  },
+  {
+    src: "/videos/eighth.mp4",
+    text: "Настройка микросхем для работы",
+    poster: "/images/eighth-video-poster.png",
+  },
 ];

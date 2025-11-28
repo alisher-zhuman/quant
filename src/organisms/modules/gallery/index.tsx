@@ -13,7 +13,7 @@ const Gallery = () => {
 
       <div className="mt-4 md:mt-8">
         <div className="flex items-center md:justify-center gap-3 md:gap-5 overflow-x-auto md:overflow-x-visible scroll-smooth snap-x snap-mandatory md:flex-wrap">
-          {VIDEOS.map(({ src, text }, i) => (
+          {VIDEOS.map(({ src, text, poster }, i) => (
             <div
               key={i}
               className={cn(
@@ -25,6 +25,8 @@ const Gallery = () => {
               <video
                 src={src}
                 controls
+                preload="metadata"
+                poster={poster}
                 className="rounded-2xl w-full h-44.5 object-cover"
               />
 
