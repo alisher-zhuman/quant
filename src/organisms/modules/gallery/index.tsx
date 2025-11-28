@@ -6,13 +6,13 @@ const Gallery = () => {
   const t = useTranslations();
 
   return (
-    <section className="my-20 md:my-32 max-w-[1600px] m-auto">
+    <section className="my-20 lgx:px-10 md:my-32 max-w-[1600px] m-auto">
       <h1 className="text-2xl px-5 lgx:px-10 md:text-3xl font-medium text-center">
         {t("Видеогалерея")}
       </h1>
 
       <div className="mt-4 md:mt-8">
-        <div className="flex items-center gap-3 md:gap-5 overflow-x-auto md:overflow-x-visible scroll-smooth snap-x snap-mandatory md:flex-wrap">
+        <div className="flex items-center md:justify-center gap-3 md:gap-5 overflow-x-auto md:overflow-x-visible scroll-smooth snap-x snap-mandatory md:flex-wrap">
           {VIDEOS.map(({ src, text }, i) => (
             <div
               key={i}
