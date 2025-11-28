@@ -44,9 +44,7 @@ export const Navbar = ({ mobile, closeMenu }: Props) => {
 
           <li>
             <Link
-              href="http://cabinet.quant.kg/cabinet"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/"
               className="flex items-center justify-center gap-2 py-1.5 px-3.5 sm:py-2 sm:px-4 text-[#1570EF] bg-[#1570EF1A] rounded-xl"
             >
               {t("Войти")}
