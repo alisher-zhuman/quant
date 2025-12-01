@@ -5,6 +5,7 @@ import { LANGUAGES } from "@/utils/constants";
 
 export const LanguageSwitcher = () => {
   const router = useRouter();
+
   const pathname = usePathname();
 
   const currentLang = useLocale();
