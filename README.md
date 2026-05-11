@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QUANT
 
-## Getting Started
+QUANT marketing website built with Next.js 16, multilingual routing (`ru`, `kg`, `en`), SEO metadata, `sitemap.xml`, `robots.txt`, and an EmailJS consultation form.
 
-First, run the development server:
+## Tech Stack
+
+- `Next.js 16` (App Router)
+- `React 19`
+- `TypeScript`
+- `next-intl` for localization
+- `Tailwind CSS 4`
+- `ESLint`
+- `Husky` (`pre-push`: lint + typecheck)
+
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - run the development server
+- `npm run build` - build for production
+- `npm run start` - start production server
+- `npm run lint` - run ESLint
+- `npm run typecheck` - run TypeScript checks (`tsc --noEmit`)
 
-## Learn More
+## Localization
 
-To learn more about Next.js, take a look at the following resources:
+- Locales are configured in `src/i18n/routing.ts`
+- Translation files are in `src/messages`
+- Routes are handled via `src/app/[locale]`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+URL examples:
+- `/ru`
+- `/kg`
+- `/en`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## SEO
 
-## Deploy on Vercel
+- Localized `metadata` is generated with `generateMetadata`
+- `robots.txt` is generated in `src/app/robots.ts`
+- `sitemap.xml` is generated in `src/app/sitemap.ts`
+- Base domain is centralized in `src/shared/constants` (`SITE_URL`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+src/
+  app/           # App Router pages and metadata routes
+  shared/        # Shared constants, helpers, types, api
+  atoms/
+  molecules/
+  organisms/
+  i18n/
+  messages/
+```
+
+## Git hooks
+
+Before `git push`, the following commands run automatically:
+
+- `npm run lint`
+- `npm run typecheck`
+
+Configured in `.husky/pre-push`.
+
+## Documentation
+
+Additional notes are available in the `docs/` directory.

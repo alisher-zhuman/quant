@@ -60,6 +60,9 @@ export const generateMetadata = async ({
       description: t("twitterDescription"),
       images: ["/images/logo.png"],
     },
+    verification: {
+      google: "I099xOmDR4DpqoL-SiXcl-OyxRkW-haGi9BkvHVoUo0",
+    },
     alternates: {
       canonical: `${SITE_URL}/${locale}`,
       languages: {
