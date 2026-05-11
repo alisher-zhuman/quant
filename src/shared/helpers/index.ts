@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { MetadataParams } from "../interfaces";
-import { OG_LOCALE_MAP } from "../constants";
+import { OG_LOCALE_MAP, SITE_URL } from "../constants";
 
 export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
@@ -37,11 +37,11 @@ export const generateMetadata = async ({
     ],
     creator: "Alisher Zhuman",
     publisher: "Alisher",
-    metadataBase: new URL("https://quant.kg"),
+    metadataBase: new URL(SITE_URL),
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
-      url: `https://quant.kg/${locale}`,
+      url: `${SITE_URL}/${locale}`,
       siteName: "Quant",
       images: [
         {
@@ -61,11 +61,11 @@ export const generateMetadata = async ({
       images: ["/images/logo.png"],
     },
     alternates: {
-      canonical: `https://quant.kg/${locale}`,
+      canonical: `${SITE_URL}/${locale}`,
       languages: {
-        ru: "https://quant.kg/ru",
-        kg: "https://quant.kg/kg",
-        en: "https://quant.kg/en",
+        ru: `${SITE_URL}/ru`,
+        kg: `${SITE_URL}/kg`,
+        en: `${SITE_URL}/en`,
       },
     },
   };
