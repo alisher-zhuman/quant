@@ -5,8 +5,8 @@ import { useTranslations } from "next-intl";
 import { ConsultationForm } from "@/molecules/consultation-form";
 import { Button } from "@/atoms/button";
 import { Modal } from "@/atoms/modal";
-import { cn } from "@/utils/helpers";
-import { HOW_IT_WORKS } from "@/utils/constants";
+import { cn } from "@/shared/helpers";
+import { HOW_IT_WORKS } from "@/shared/constants";
 
 const HowItWorks = () => {
   const [isOpen, setIsOpen] = useState(false);

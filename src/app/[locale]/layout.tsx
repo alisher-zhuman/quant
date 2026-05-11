@@ -7,8 +7,8 @@ import { getMessages } from "next-intl/server";
 import { Toaster } from "react-hot-toast";
 import { Header } from "@/organisms/layout/header";
 import { Footer } from "@/organisms/layout/footer";
-import { METADATA } from "@/utils/constants";
 import { routing } from "@/i18n/routing";
+export { generateMetadata } from "@/shared/helpers";
 
 const rubik = Rubik({
   subsets: ["latin", "cyrillic"],
@@ -16,8 +16,6 @@ const rubik = Rubik({
   display: "swap",
   variable: "--font-rubik",
 });
-
-export const metadata = METADATA;
 
 interface Props {
   children: ReactNode;

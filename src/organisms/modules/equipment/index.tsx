@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { EQUIPMENTS } from "@/utils/constants";
-import { cn } from "@/utils/helpers";
+import { EQUIPMENTS } from "@/shared/constants";
+import { cn } from "@/shared/helpers";
 
 const Equipment = () => {
   const t = useTranslations();

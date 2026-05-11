@@ -2,11 +2,11 @@
 import { FormEvent, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { useTranslations } from "next-intl";
-import { sendEmail } from "@/api";
 import { Button } from "@/atoms/button";
 import { NameInput } from "@/atoms/name-input";
 import { PhoneInput } from "@/atoms/phone-input";
-import { checkFormValid, cn } from "@/utils/helpers";
+import { checkFormValid, cn } from "@/shared/helpers";
+import { sendEmail } from "@/shared/api";
 
 interface Props {
   toggleModal?: () => void;

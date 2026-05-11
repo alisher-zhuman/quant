@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 
+export const SITE_URL = "https://quant.kg";
+
 export const METADATA: Metadata = {
   title: "КВАНТ",
   description:
@@ -26,12 +28,12 @@ export const METADATA: Metadata = {
   ],
   creator: "Alisher Zhuman",
   publisher: "Alisher",
-  metadataBase: new URL("https://quant.kg"),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     title: "КВАНТ — интеллектуальный счётчик воды",
     description:
       "Автоматический сбор и передача показаний. Экономия, контроль, удобство — КВАНТ для вашего дома и бизнеса.",
-    url: "https://quant.kg",
+    url: SITE_URL,
     siteName: "Quant",
     images: [
       {
@@ -52,7 +54,7 @@ export const METADATA: Metadata = {
     images: ["/images/logo.png"],
   },
   alternates: {
-    canonical: "https://quant.kg",
+    canonical: SITE_URL,
   },
 };
 
@@ -360,3 +362,10 @@ export const VIDEOS = [
     poster: "/images/eighth-video-poster.png",
   },
 ];
+
+
+export const OG_LOCALE_MAP: Record<string, string> = {
+  ru: "ru_RU",
+  en: "en_US",
+  kg: "ky_KG",
+};

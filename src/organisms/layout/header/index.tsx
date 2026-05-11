@@ -7,7 +7,7 @@ import { Navbar } from "@/molecules/navbar";
 import { ConsultationForm } from "@/molecules/consultation-form";
 import { Button } from "@/atoms/button";
 import { Modal } from "@/atoms/modal";
-import { cn } from "@/utils/helpers";
+import { cn } from "@/shared/helpers";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/atoms/language-switcher";
 import { usePathname } from "next/navigation"; // <--- Импортируем
-import { cn } from "@/utils/helpers";
+import { cn } from "@/shared/helpers";
 
 interface Props {
   mobile?: boolean;
