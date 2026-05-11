@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { DOCUMENTS } from "@/utils/constants";
+import { DOCUMENTS } from "@/shared/constants";
 
 const Documents = () => {
   const router = useRouter();

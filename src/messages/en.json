@@ -115,5 +115,25 @@
   "Видеогалерея": "Video gallery",
   "Настройка микросхем для работы": "Microchip configuration for operation",
   "address_bishkek": "Bishkek, Frunze St., 583",
-  "work_hours": "from 9:00 to 18:00"
+  "work_hours": "from 9:00 to 18:00",
+  "metadata": {
+    "title": "KVANT",
+    "description": "KVANT smart water meter provides automated meter reading, consumption control, and savings for homes and businesses with reliable IoT technology.",
+    "keywords": [
+      "water meter",
+      "smart meter",
+      "KVANT",
+      "IoT",
+      "internet of things",
+      "water accounting",
+      "utility automation",
+      "automatic meter reading",
+      "smart home"
+    ],
+    "ogTitle": "KVANT — smart water meter",
+    "ogDescription": "Automated meter reading and transmission. Savings, control, and convenience for homes and businesses.",
+    "ogImageAlt": "KVANT — smart water meter",
+    "twitterTitle": "KVANT — smart water meter",
+    "twitterDescription": "Automated meter reading and water consumption control powered by IoT."
+  }
 }

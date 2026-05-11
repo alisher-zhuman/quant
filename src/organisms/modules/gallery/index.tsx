@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import { VIDEOS } from "@/utils/constants";
-import { cn } from "@/utils/helpers";
+import { VIDEOS } from "@/shared/constants";
+import { cn } from "@/shared/helpers";
 
 const Gallery = () => {
   const t = useTranslations();

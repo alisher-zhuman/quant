@@ -360,3 +360,10 @@ export const VIDEOS = [
     poster: "/images/eighth-video-poster.png",
   },
 ];
+
+
+export const OG_LOCALE_MAP: Record<string, string> = {
+  ru: "ru_RU",
+  en: "en_US",
+  kg: "ky_KG",
+};

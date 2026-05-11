@@ -5,3 +5,7 @@ export interface ToastMessage {
   message: string;
   type: ToastType;
 }
+
+export interface MetadataParams {
+  params: Promise<{ locale: string }>;
+}

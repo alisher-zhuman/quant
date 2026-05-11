@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { WHY_US } from "@/utils/constants";
+import { WHY_US } from "@/shared/constants";
 
 const WhyUs = () => {
   const t = useTranslations();

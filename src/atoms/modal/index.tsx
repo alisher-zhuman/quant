@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Image from "next/image";
-import { cn } from "@/utils/helpers";
+import { cn } from "@/shared/helpers";
 
 interface ModalProps {
   children: ReactNode;

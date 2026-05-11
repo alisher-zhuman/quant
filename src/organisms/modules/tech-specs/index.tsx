@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { TECH_SPECS } from "@/utils/constants";
+import { TECH_SPECS } from "@/shared/constants";
 
 const TechSpecs = () => {
   const t = useTranslations();

@@ -1,4 +1,4 @@
-import { cn } from "@/utils/helpers";
+import { cn } from "@/shared/helpers";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
